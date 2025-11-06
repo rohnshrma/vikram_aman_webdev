@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  position: absolute;
+  transform: rotate(45deg);
+  animation-name: beat;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#box::after {
+  border-radius: 50%;
+  content: "";
+  height: 100px;
+  width: 100px;
+  background-color: coral;
+  position: absolute;
+  top: -50px;
+}
+#box::before {
+  border-radius: 50%;
+  content: "";
+  height: 100px;
+  width: 100px;
+  background-color: coral;
+  position: absolute;
+  left: -50px;
+}
